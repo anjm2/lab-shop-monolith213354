@@ -40,7 +40,8 @@ logging:
     org.springframework.cloud: debug
 
 api:
-  url: localhost:8082
+  url: 
+      inventory: localhost:8082
 
 
 server:
@@ -72,7 +73,5 @@ spring:
           destination: labshopmonolith
           contentType: application/json
 
-api:
-  url: inventory:8080
 
 

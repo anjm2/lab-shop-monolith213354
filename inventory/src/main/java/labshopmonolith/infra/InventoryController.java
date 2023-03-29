@@ -23,7 +23,7 @@ public class InventoryController {
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
-    public Inventory decreasestock(
+    public Inventory decreaseStock(
         @PathVariable(value = "id") Long id,
         @RequestBody DecreasestockCommand decreasestockCommand,
         HttpServletRequest request,
@@ -36,7 +36,7 @@ public class InventoryController {
 
         optionalInventory.orElseThrow(() -> new Exception("No Entity Found"));
         Inventory inventory = optionalInventory.get();
-        inventory.decreasestock(decreasestockCommand);
+        inventory.decreaseStock(decreasestockCommand);
 
         inventoryRepository.save(inventory);
         return inventory;

@@ -27,5 +27,7 @@ public class Inventory {
         return inventoryRepository;
     }
 
-    public void decreasestock(DecreasestockCommand decreasestockCommand) {}
+    public void decreaseStock(DecreasestockCommand decreaseStockCommand) {
+        setStock(getStock() - decreaseStockCommand.getQty().longValue());  // Copy & Paste this code
+    }
 }

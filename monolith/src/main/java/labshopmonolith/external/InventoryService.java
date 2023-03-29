@@ -13,8 +13,8 @@ public interface InventoryService {
         method = RequestMethod.PUT,
         path = "/inventories/{id}/decreasestock"
     )
-    public void decreasestock(
+    public void decreaseStock(
         @PathVariable("id") Long id,
-        @RequestBody DecreasestockCommand decreasestockCommand
+        @RequestBody DecreaseStockCommand decreaseStockCommand
     );
 }
